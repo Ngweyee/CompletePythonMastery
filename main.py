@@ -1,5 +1,4 @@
 # Comparison Operators
-
 ten = 10
 print(ten > 3)
 print(ten >= 3)
@@ -14,7 +13,6 @@ print(ord("b"))
 print(ord("B"))
 
 # Conditional Statements
-
 temperature = 23
 if temperature > 30:
     print("It is hot")
@@ -28,13 +26,11 @@ print("Done")
 
 
 # Ternary Operator
-
 age = 16
 message = "Eligible" if age >= 18 else "Not Eligible"
 print(message)
 
 # Logical Operators
-
 high_income = True
 good_credit = True
 is_student = False
