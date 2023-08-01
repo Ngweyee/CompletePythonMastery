@@ -1,83 +1,143 @@
-# Variables && Variable Names
-import math
+# Comparison Operators
 
-student_count = 1000
-rating = 4.99
-is_published = False
-course_name = "Python Programming"
-print(student_count)
-print(rating)
-print(is_published)
-print(course_name)
+ten = 10
+print(ten > 3)
+print(ten >= 3)
+print(ten < 20)
+print(ten <= 20)
+print(ten == ten)
+print(ten == "10")
+print(ten != "10")
+print("bag" > "apple")
+print("bag" > "Bag")
+print(ord("b"))
+print(ord("B"))
 
-# Strings
-course = "Python Programming"
-print(len(course))
-print(course[0])
-print(course[-1])
-print(course[0:3])
-print(course[0:])
-print(course[:3])
-print(course[:])
+# Conditional Statements
 
-# Escape Sequences
-# \'
-# \"
-# \\
-# \n
+temperature = 23
+if temperature > 30:
+    print("It is hot")
+    print("Drink more water")
+elif temperature > 20:
+    print("It is a nice day")
+else:
+    print("It's cold")
 
-course = "Eli's Python 'Programming Journey"
-print(course)
-
-# Formatted String
-first = "Ngwe Yee"
-second = "Shoon"
-full = first + " " + second
-print(full)
-full_name = f"{first} {second}"
-full_name = f"{len(first)} {2 + 2}"
-print(full_name)
-
-# String Methods
-course = " python programming "
-print(course.upper())
-print(course.lower())
-print(course.title())
-print(course.strip())
-print(course.lstrip())
-print(course.rstrip())
-print(course.find("pro"))  # return index
-print(course.replace("p", "j"))
-print("pro" in course)
-print("swift" not in course)
-
-# Numbers
-print(10 + 3)
-print(10 - 3)
-print(10 * 3)
-print(10 / 3)
-print(10 % 3)
-print(10 // 3)
-print(10**3)
-
-x = 10
-x = x + 3
-x += 3
-print(x)
-
-# Working with Numbers
-print(round(2.9))
-print(abs(2.2))
-print(math.ceil(2.3))
-print(math.floor(2.5))
-print(math.factorial(5))
+print("Done")
 
 
-# Type Conversion
+# Ternary Operator
 
-print(bool(0))
-print(bool(1))
-print(bool(-1))
-print(bool(5))
-print(bool(""))
-print(bool("False"))
+age = 16
+message = "Eligible" if age >= 18 else "Not Eligible"
+print(message)
+
+# Logical Operators
+
+high_income = True
+good_credit = True
+is_student = False
+
+if high_income or good_credit:  # and, or
+    print("Eligible")
+else:
+    print("Not Eligible")
+
+
+if (high_income or good_credit) and not is_student:
+    print("Eligible")
+else:
+    print("Not Eligible")
+
+# Short-circuit evaluation
+high_income = False
+good_credit = True
+student = True
+
+if high_income or good_credit and not student:
+    print("Eligible")
+
+# Changing Comparisons Operators
+# age should be between 18 and 65
+age = 22
+
+# if age >= 18 and age < 65 :
+if 18 <= age < 65:
+    print("Eligible")
+
+
+# Exercise
+if 10 == "10":
+    print("a")
+elif "bag" > "apple" and "bag" > "cat":
+    print("b")
+else:
+    print("c")
+
+# For loops
+for number in range(3):
+    print("Attempt ", number + 1, (number + 1) * ".")
+
+for number in range(1, 10, 2):
+    print("Attempt ", number, number * ".")
+
+# For ... Else
+successful = True
+for number in range(3):
+    print("Attempt")
+    if successful:
+        print("Successful")
+else:
+    print("Attempted 3 times and fail")
+
+# Nested Loop
+for x in range(5):
+    for y in range(3):
+        print(f"({x} , {y})")
+
+# Iterables
+print(type(5))
+print(type(range(5)))
+
+for x in range(5):
+    print(x)
+
+for x in "Python":
+    print(x)
+
+for x in [1, 2, 3, 4]:
+    print(x)
+
+# While Loops
+number = 100
+i = 0
+while number > 0:
+    print(number)
+    number //= 2
+
+print(" ")
+
+command = ""
+while command.lower() != "quit":
+    command = input(">")
+    print("ECHO", command)
+
+# infinite loops
+while True:
+    command = input(">")
+    print("ECHO", command)
+    if command.lower() == "quit":
+        break
+
+
+# Exercise
+data = range(1, 10)
+count = 0
+for i in data:
+    if i % 2 == 0:
+        print(i)
+        i += 1
+        count += 1
+
+print(f"There are {count} even numbers")
