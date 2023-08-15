@@ -1,0 +1,4 @@
+transaction_id,product_id,price,quantity
+100,1,1000,3
+101,2,230,10
+102,3,340,8
