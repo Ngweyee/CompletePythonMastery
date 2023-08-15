@@ -1,0 +1,1 @@
+print("Customer initializes")
