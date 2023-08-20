@@ -1,16 +1,31 @@
-# This is a sample Python script.
+# 1- Pypi introduction
+# 2- Pip
+# command to install package => pip3 install requests
+# upgrade pip => pip3 install --upgrade pip
+# list inside the package => pip3 list
+import requests
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+response = requests.get("http://www.google.com")
+print(response)
 
+# 3- Virtual Environments
+# create virtual environment for different versions
+# source env/bin/activate    -> run file from virtual environment file
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+# 4- Pipenv
+# install pipenv
+# pipenv --venv  virtual directory run from pipenv
+# pipenv shell -> activate the virtual environment
+# exit -> deactivate
 
+# 5- Virtual Environment in VSCode
+# 6- Pip file
+# when we install package using pip env, it generate two classes Pipfile & Pipfile.lock
+# Pipfile => source, default packages, packages and requires (to keep track of the dependencies of the project and versions)
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+# 7- Managing Dependencies
+# pipenv graph => list of all the installed dependencies.
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+# 8- Publishing Packages
+# need to install 3 packages globally
+# pip3 install setuptools wheel twine
